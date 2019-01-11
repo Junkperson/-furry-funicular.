@@ -1,14 +1,20 @@
 package com.junkperpen.fly.pattern.factory;
 
 
-
 public class Test {
 
     public static void main(String[] args) {
-        Food food = new BeanFactory().getB();
+        Food food = null;
+
+        String str ="B";
+        if("A".equals(str)){
+            food= BeanFactory.getA();
+        }else if("B".equals(str)){
+            food= BeanFactory.getB();
+        }
         System.out.println(food);
-        Food A=new AFactory().getFood();
-        System.out.println(A);
+
+
 
     }
 }

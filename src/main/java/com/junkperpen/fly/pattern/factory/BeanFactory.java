@@ -1,28 +1,16 @@
 package com.junkperpen.fly.pattern.factory;
 
 public class BeanFactory {
+    private Food food;
 
     public static Food getA(){
-        return new A();
+        return new AFood();
     }
     public static Food getB(){
-        return new B();
-    }
-    public static Food getC(){
-        return new C();
+        return new BFood();
     }
 
-    public Food getFood(String food){
-        if("A".equals(food)){
-            return getA();
-        }else if("B".equals(food)){
-            return getB();
-        }else if("C".equals(food)){
-            return getC();
-        }
-        return null;
 
-    }
 
 
 }
