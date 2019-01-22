@@ -1,24 +1,18 @@
 package com.market.fly.order.controller;
 
 
-import com.market.fly.plat.mapper.UserMapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 
 @RestController
 @RequestMapping("/hello")
-public class Hello {
+public class HelloController {
 
-    private static final Log logger = LogFactory.getLog(Hello.class);
+    private static final Log logger = LogFactory.getLog(HelloController.class);
 
-    @Autowired
-    private UserMapper userMapper;
 
     @RequestMapping("/hi")
     public String hi(){
@@ -28,8 +22,6 @@ public class Hello {
 
     @RequestMapping("/hi")
     public String hi(Integer id){
-        Map map = userMapper.queryUserById(id);
-        System.out.println(map);
         return "hello world";
     }
 

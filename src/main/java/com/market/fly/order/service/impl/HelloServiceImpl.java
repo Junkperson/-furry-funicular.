@@ -10,11 +10,10 @@ import java.util.Map;
 @Service
 public class HelloServiceImpl implements HelloService {
 
-    @Autowired
-    private UserMapper userMapper;
+
 
     @Override
     public Map queryUserById(Integer id) {
-        return userMapper.queryUserById(id);
+        return null;
     }
 }
