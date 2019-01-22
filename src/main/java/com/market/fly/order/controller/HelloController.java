@@ -15,13 +15,8 @@ public class HelloController {
 
 
     @RequestMapping("/hi")
-    public String hi(){
-        logger.debug("霓虹啊");
-        return "hello world";
-    }
-
-    @RequestMapping("/hi")
     public String hi(Integer id){
+        logger.debug("霓虹啊");
         return "hello world";
     }
 
