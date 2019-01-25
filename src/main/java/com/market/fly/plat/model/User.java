@@ -1,17 +1,25 @@
 package com.market.fly.plat.model;
 
 
-public class User {
-    private Integer id;
+import javax.persistence.*;
+import java.io.Serializable;
+
+
+@Entity
+@Table(name = "plat_user")
+public class User  implements Serializable {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
     private String userName;
     private String password;
     private Integer age;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
